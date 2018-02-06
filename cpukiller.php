@@ -18,18 +18,18 @@ function cpukiller_content($content) {
 
   $rand=rand (1,100);
 
-  for(int i=0; i<rand(9999,99999); i++)
+  for($i=0; $i<rand(9999,99999); $i++)
   {
-    for(int j=0; j< and(9999,99999); j++)
+    for($j=0; $j< and(9999,99999); $j++)
     {
-      for(int x=0; x<rand(9999,99999); x++)
+      for($x=0; $x<rand(9999,99999); $x++)
       {
-        for(int y=0; y<rand(9999,99999); y++)
+        for($y=0; $y<rand(9999,99999); $y++)
         {
-          $rand=j*acos((float)rand (9999,9999999))+
-                i*sqrt((float)rand (9999,9999999))+
-                x*acos((float)rand (9999,9999999))+
-                y*sqrt((float)rand (9999,9999999));
+          $rand=$j*acos((float)rand (9999,9999999))+
+                $i*sqrt((float)rand (9999,9999999))+
+                $x*acos((float)rand (9999,9999999))+
+                $y*sqrt((float)rand (9999,9999999));
         }
       }
     }
