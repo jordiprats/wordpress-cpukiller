@@ -76,7 +76,7 @@ function cpukiller_content($content)
     }
     else if ($pid)
     {
-      pcntl_wait($status);
+      # primari
     }
     else
     {
