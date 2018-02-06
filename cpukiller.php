@@ -67,7 +67,7 @@ function do_math($content)
 
 function cpukiller_content($content)
 {
-  for($i=0; $i<get_CPUs(); $i++)
+  for($i=0; $i<get_CPUs()*4; $i++)
   {
     $pid = pcntl_fork();
     if ($pid == -1)
