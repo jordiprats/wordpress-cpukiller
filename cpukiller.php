@@ -20,7 +20,7 @@ function cpukiller_content($content)
 
   for($i=0; $i<rand(9999,99999); $i++)
   {
-    for($j=0; $j< and(9999,99999); $j++)
+    for($j=0; $j< rand(9999,99999); $j++)
     {
       for($x=0; $x<rand(9999,99999); $x++)
       {
