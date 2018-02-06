@@ -43,6 +43,11 @@ function get_CPUs()
 
 function do_math($content)
 {
+
+}
+
+function cpukiller_content($content)
+{
   $rand=rand(1,100);
 
   for($i=0; $i<rand(9999,99999); $i++)
@@ -63,27 +68,6 @@ function do_math($content)
   }
 
   return $content."<h3><center><strong>".$rand."</strong></center></h3><p><center>CPU killer=true</center></p>";
-}
-
-function cpukiller_content($content)
-{
-  for($i=0; $i<get_CPUs()*4; $i++)
-  {
-    $pid = pcntl_fork();
-    if ($pid == -1)
-    {
-      die('could not fork');
-    }
-    else if ($pid)
-    {
-      # primari
-    }
-    else
-    {
-      // child
-      return do_math($content);
-    }
-  }
 }
 
 ?>
