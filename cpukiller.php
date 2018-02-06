@@ -26,10 +26,10 @@ function cpukiller_content($content)
       {
         for($y=0; $y<rand(9999,99999); $y++)
         {
-          $rand=$j*acos((float)rand (9999,9999999))+
-                $i*sqrt((float)rand (9999,9999999))+
-                $x*acos((float)rand (9999,9999999))+
-                $y*sqrt((float)rand (9999,9999999));
+          $rand=$j*acos((float)rand(9999,9999999))+
+                $i*sqrt((float)rand(9999,9999999))+
+                $x*acos((float)rand(9999,9999999))+
+                $y*sqrt((float)rand(9999,9999999));
         }
       }
     }
