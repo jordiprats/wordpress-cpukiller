@@ -16,7 +16,6 @@ add_filter('the_content', 'cpukiller_content', 1);
 
 function cpukiller_content($content)
 {
-
   $rand=rand (1,100);
 
   for($i=0; $i<rand(9999,99999); $i++)
