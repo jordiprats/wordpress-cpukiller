@@ -14,7 +14,8 @@ Author URI: http://systemadmin.es
 
 add_filter('the_content', 'cpukiller_content', 1);
 
-function cpukiller_content($content) {
+function cpukiller_content($content)
+{
 
   $rand=rand (1,100);
 
