@@ -14,38 +14,6 @@ Author URI: http://systemadmin.es
 
 add_filter('the_content', 'cpukiller_content', 1);
 
-function get_CPUs()
-{
-  $totalCPUs = 1;
-  if (is_file('/proc/cpuinfo'))
-  {
-    $cpuinfo = file_get_contents('/proc/cpuinfo');
-    preg_match_all('/^processor/m', $cpuinfo, $matches);
-    $totalCPUs = count($matches[0]);
-  }
-  else
-  {
-    $process = @popen('sysctl -a', 'rb');
-    if (false !== $process)
-    {
-      $output = stream_get_contents($process);
-      preg_match('/hw.ncpu: (\d+)/', $output, $matches);
-      if ($matches)
-      {
-        $totalCPUs = intval($matches[1][0]);
-      }
-      pclose($process);
-    }
-  }
-
-  return $totalCPUs;
-}
-
-function do_math($content)
-{
-
-}
-
 function cpukiller_content($content)
 {
   $rand=rand(1,100);
